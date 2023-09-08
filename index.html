@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOL FORM</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Potaeto Potaoto</h1>
+        <p><em>Help the world learn to pronounce correctly.</em></p>
+        <p><em>Please we're desperate.</em></p>
+    </header>
+
+    <!--                        FORM TAG
+        > action attribute to define the URL that processes the form.
+        > method attribute to define how the form is submitted.
+            > post for when you're changing data on the server.
+            > get for when you're getting data.
+    -->
+
+    <form action="" method="get" class="form">
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="john@example.com">
+        </div>
+
+        <!--                    RADIO BUTTONS
+            > Wrap inside a <fieldset> element, labeled with a <legend>.
+            > Associate a <label> element with each radio button.
+            > Use the same 'name' attribute for each radio button in the group.
+            > Use different 'value' attribute for each radio button.
+        -->
+
+        <field-set class="pronunciation-field-set">
+            <legend>Preferred Pronunciation</legend>
+            <div class="options-box">
+                <div class="form-row-radio">
+                    <input type="radio" id="pronunciation-one" name="pronunciation-type" value="potaeto" checked>
+                    <label for="pronunciation-one" class="radio-label"><em>potaeto</em></label>
+                </div>
+                <div class="form-row-radio">
+                    <input type="radio" id="pronunciation-two" name="pronunciation-type" value="potahto">
+                    <label for="pronunciation-two" class="radio-label"><em>potaoto</em></label>
+                </div>            
+            </div>
+        </field-set>
+
+        <div class="form-row-select">
+            <label for="favorite-uchiha">Favorite Uchiha</label>
+            <select name="favorite-uchiha" id="favorite-uchiha">
+                <option value="Madara">Madara Uchiha</option>
+                <option value="Itachi" selected>Itachi Uchiha</option>
+                <option value="Obito"> Obito Uchiha</option>
+                <option value="Sasuke">Sasuke Uchiha</option>
+                <option value="Shisui">Shisui Uchiha</option>
+            </select>
+        </div>
+
+    </form>
+
+</body>
+</html>

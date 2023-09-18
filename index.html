@@ -16,21 +16,24 @@
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
-            <button class="btn-login">LOGIN</button>
+            <button class="btn-login" id="btn-login">LOGIN</button>
         </nav>
     </header>
 
-    <div class="form-container">
-        <div class="form-card login">
+    <div class="form-container inactive" id="form-container">
+
+        <span class="icon-close material-symbols-outlined" id="close-btn">close</span>
+
+        <div class="form-card login inactive" id="login-card">
             <h2>Login</h2>
-            <form action="#">
+            <form id="login-form" action="#">
                 <div class="input-item-primary">
                     <span class="icon-arrow material-symbols-outlined">chevron_right</span>
                     <input type="email" name="email" id="email-input" placeholder="Email" required>
-                    <span class="icon-arrow material-symbols-outlined">mail</span>
+                    <span class="icon material-symbols-outlined">mail</span>
                 </div>
                 <div class="input-item-primary">
-                    <span class="icon material-symbols-outlined">chevron_right</span>
+                    <span class="icon-arrow material-symbols-outlined">chevron_right</span>
                     <input type="password" name="password" id="password-input" placeholder="Password" required>
                     <span class="icon material-symbols-outlined">lock</span>
                 </div>
@@ -46,10 +49,46 @@
                 </div>
                 <div class="input-item-tertiary">
                     <p>Don't have an account?</p>
-                    <a href="#">REGISTER <span class="icon-arrow material-symbols-outlined">arrow_right_alt</span></a>
+                    <a  id="register-link" href="#">REGISTER <span class="icon-arrow material-symbols-outlined">arrow_right_alt</span></a>
                 </div>
             </form>
         </div>
+        
+        <div class="form-card registration inactive" id="registration-card">
+            <h2>Register</h2>
+            <form id="registration-form" action="#">
+                <div class="input-item-primary">
+                    <span class="icon-arrow material-symbols-outlined">chevron_right</span>
+                    <input type="text" name="username" id="username-input" placeholder="Username" required>
+                    <span class="icon material-symbols-outlined">person</span>
+                </div>
+                <div class="input-item-primary">
+                    <span class="icon-arrow material-symbols-outlined">chevron_right</span>
+                    <input type="email" name="email" id="email-input" placeholder="Email" required>
+                    <span class="icon material-symbols-outlined">mail</span>
+                </div>
+                <div class="input-item-primary">
+                    <span class="icon-arrow material-symbols-outlined">chevron_right</span>
+                    <input type="password" name="password" id="password-input" placeholder="Password" required>
+                    <span class="icon material-symbols-outlined">lock</span>
+                </div>
+                <div class="input-item-secondary">
+                    <div class="terms-and-conditions-card">
+                        <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions-input" required>
+                        <label for="terms-and-conditions-input">I agree to the <a href="https://shrek.fandom.com/wiki/Shrek_(film)/Transcript"><em>terms and conditions</em></a></label>
+                    </div>
+                </div>
+                <div class="input-item-secondary">
+                    <button type="submit" class="submit-btn">REGISTER</button>
+                </div>
+                <div class="input-item-tertiary">
+                    <p>Already have an account?</p>
+                    <a href="#" id="login-link">LOGIN <span class="icon-arrow material-symbols-outlined">arrow_right_alt</span></a>
+                </div>
+            </form>
+        </div>
+
+
     </div>
 </body>
 </html>

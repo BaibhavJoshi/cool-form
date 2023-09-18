@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -92,6 +100,8 @@ body{
 }
 
 .form-container{
+    position:relative;
+
     width:500px;
     margin:1em;
     padding:2em;
@@ -105,6 +115,21 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.form-container .icon-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    color:white;
+    padding:0.3em;
+    cursor:pointer;
+}
+
+.form-container .icon-close:hover{
+    transform:scale(1.1);
+    background:rgba(0, 0, 0, 0.219);
+    border-radius:50%;
 }
 
 .form-card{
@@ -129,7 +154,7 @@ form{
 .input-item-primary{
     position:relative;
     width:80%;
-    padding:1em;
+    padding:1em 0;
     padding-bottom:0.6em;
     border-bottom:2px solid rgba(255, 255, 255, 0.507);
 
@@ -138,7 +163,7 @@ form{
     align-items:center;
 }
 
-.input-item-primary input[type="email"], .input-item-primary input[type="password"]{
+.input-item-primary input[type="email"], .input-item-primary input[type="password"], .input-item-primary input[type="text"]{
     width:100%;
     height:100%;
     font-size:large;
@@ -164,8 +189,8 @@ input:-webkit-autofill:focus {
 
 .input-item-secondary{
     width:80%;
-    padding:1em 0;
-
+    padding:1em 0.2em;
+    padding-bottom:0.5em;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -173,9 +198,10 @@ input:-webkit-autofill:focus {
 
 .submit-btn{
     margin:0 auto;
-    padding:0.9em 2.5em;
+    padding:1em 2.5em;
     font-size:large;
     font-weight:bold;
+    width:100%;
 
     border-radius:0.7em;
 }
@@ -199,6 +225,25 @@ input:-webkit-autofill:focus {
     transform:scale(1.5);
     accent-color:white;
 }
+
+.input-item-secondary #terms-and-conditions-input{
+    transform:scale(1.5);
+    accent-color:white;
+}
+
+.terms-and-conditions-card{
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:0.7em;
+
+}
+
+.input-item-secondary .terms-and-conditions-card a{
+    display:inline;
+}
+
 
 .remember-me-card{
     display:flex;
@@ -237,5 +282,10 @@ input:-webkit-autofill:focus {
 .input-item-secondary a:hover::after, .input-item-tertiary a:hover::after{
     transform:scaleX(1);
     transition:0.4s;
+}
+
+
+.inactive{
+    display:none;
 }
 

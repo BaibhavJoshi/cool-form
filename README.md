@@ -1,4 +1,4 @@
-# registration-login-form
+# login-and-registration
 
 A simple form for logins or registrations.
 
